@@ -18,13 +18,18 @@ GET {{apiBaseURL}}/posts/{{specificPost}}
 
 ###
 
+# here you can store the title of the getPost req in a var
+# then, use it in the createPost req body (ths could be
+# an auth token for instance)
+@storedPostTitle = {{getPost.response.body.$.title}}
+
 # create a new post with a .env variable
 # @name createPost
 POST {{apiBaseURL}}/posts
 Content-Type: application/json
 
 {
-    "title": "foo",
+    "title": "{{storedPostTitle}} -- The Stored Title",
     "body": "bar",
     "someSecret": "{{$dotenv FAKE_SECRET}}",
     "userId": 1
