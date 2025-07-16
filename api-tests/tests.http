@@ -38,3 +38,8 @@ Content-Type: application/json
 
 # delete a specific post
 DELETE {{apiBaseURL}}/posts/{{specificPost}}
+
+###
+
+# filter post by userId query string
+GET {{apiBaseURL}}/posts?userId=5
