@@ -3,10 +3,9 @@
 
 ###
 
-# you can add a "@name" label for the request like so:
-# @name getPosts
-
+# you can add a name label for the request like so:
 # get all posts
+# @name getPosts
 GET {{apiBaseURL}}/posts
 
 ###
