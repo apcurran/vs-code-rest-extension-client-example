@@ -1,6 +1,11 @@
 # Use variables in requests
 @apiBaseURL = https://jsonplaceholder.typicode.com
 
+###
+
+# you can add a "@name" label for the request like so:
+# @name getPosts
+
 # get all posts
 GET {{apiBaseURL}}/posts
 
