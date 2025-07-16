@@ -13,11 +13,13 @@ GET {{apiBaseURL}}/posts
 @specificPost = 7
 
 # get a single post
+# @name getPost
 GET {{apiBaseURL}}/posts/{{specificPost}}
 
 ###
 
 # create a new post with a .env variable
+# @name createPost
 POST {{apiBaseURL}}/posts
 Content-Type: application/json
 
@@ -31,6 +33,7 @@ Content-Type: application/json
 ###
 
 # update a pre-existing post
+# @name updatePost
 PATCH {{apiBaseURL}}/posts/{{specificPost}}
 Content-Type: application/json
 
@@ -41,6 +44,7 @@ Content-Type: application/json
 ###
 
 # delete a specific post
+# @name deletePost
 DELETE {{apiBaseURL}}/posts/{{specificPost}}
 
 ###
