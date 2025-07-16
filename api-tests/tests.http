@@ -1,0 +1,12 @@
+# Use variables in requests
+@apiBaseURL = https://jsonplaceholder.typicode.com
+
+# get all posts
+GET {{apiBaseURL}}/posts
+
+###
+
+# get a single post
+@specificPost = 7
+
+GET {{apiBaseURL}}/posts/{{specificPost}}
