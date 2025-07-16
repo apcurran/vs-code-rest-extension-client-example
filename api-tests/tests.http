@@ -6,15 +6,14 @@ GET {{apiBaseURL}}/posts
 
 ###
 
-# get a single post
 @specificPost = 7
 
+# get a single post
 GET {{apiBaseURL}}/posts/{{specificPost}}
 
 ###
 
 # create a new post with a .env variable
-
 POST {{apiBaseURL}}/posts
 Content-Type: application/json
 
@@ -23,4 +22,14 @@ Content-Type: application/json
     "body": "bar",
     "someSecret": "{{$dotenv FAKE_SECRET}}",
     "userId": 1
+}
+
+###
+
+# update a pre-existing post
+PATCH {{apiBaseURL}}/posts/{{specificPost}}
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings"
 }
