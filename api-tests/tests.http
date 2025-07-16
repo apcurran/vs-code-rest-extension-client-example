@@ -33,3 +33,8 @@ Content-Type: application/json
 {
     "title": "The Lord of the Rings"
 }
+
+###
+
+# delete a specific post
+DELETE {{apiBaseURL}}/posts/{{specificPost}}
