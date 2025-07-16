@@ -10,3 +10,17 @@ GET {{apiBaseURL}}/posts
 @specificPost = 7
 
 GET {{apiBaseURL}}/posts/{{specificPost}}
+
+###
+
+# create a new post with a .env variable
+
+POST {{apiBaseURL}}/posts
+Content-Type: application/json
+
+{
+    "title": "foo",
+    "body": "bar",
+    "someSecret": "{{$dotenv FAKE_SECRET}}",
+    "userId": 1
+}
